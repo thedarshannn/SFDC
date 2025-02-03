@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Choose a contact</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Choose a contact</h1>
+
+            <section class="search-section">
+                <h2>Search for a contact</h2>
+
+                <div class="search-form">
+                    <div class="search-form-container">
+                        <div class="search-form-left">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First name</label>
+                                    <input type="text" id="firstName">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName">Last name</label>
+                                    <input type="text" id="lastName">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dob">Date of birth</label>
+                                    <input type="date" id="dob">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" id="email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone number</label>
+                                    <input type="tel" id="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-form-right">
+                            <div class="form-group full-width">
+                                <label for="address">Street address</label>
+                                <input type="text" id="address">
+                            </div>
+
+                            <div class="form-row address-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <select id="state">
+                                        <option value="">Select state</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="zip">Zip code</label>
+                                    <input type="text" id="zip">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="searchBtn" class="search-button">Search</button>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <table id="contactsTable">
+                    <thead>
+                        <tr>
+                            <th class="checkbox-col"></th>
+                            <th>Name</th>
+                            <th>DOB</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Zip</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contactsBody"></tbody>
+                </table>
+                <div id="noResults" class="hidden">No results found</div>
+
+                <div class="pagination" id="pagination">
+                    <button id="prevPage" class="page-nav">❮</button>
+                    <span id="currentPage">1</span>
+                    <button id="nextPage" class="page-nav">❯</button>
+                </div>
+            </section>
+
+            <section class="selected-contact-section">
+                <h2>Selected Contact Details</h2>
+                <div class="contact-details">
+                    <div class="detail-row">
+                        <label>Name:</label>
+                        <span id="selectedName">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Email:</label>
+                        <span id="selectedEmail">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Phone:</label>
+                        <span id="selectedPhone">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Address:</label>
+                        <span id="selectedAddress">-</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
